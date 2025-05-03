@@ -1,2 +1,58 @@
 # summary-uts-data-mining-aditya-eko
-Ringkasan Materi UTS
+Ringkasan ini mencakup materi yang telah dipelajari sebelum Ujian Tengah Semester (UTS), meliputi penggunaan **pandas**, **matplotlib**, serta algoritma **Naive Bayes** dan **Decision Tree**. Materi ini penting dalam proses analisis data dan machine learning, serta sangat relevan untuk pengembangan skill di dunia industri data saat ini.
+
+---
+
+# 1. **Pandas**
+
+### 📌 Pandas
+Pandas adalah library Python yang digunakan untuk manipulasi dan analisis data. Dua struktur data utamanya adalah:
+- `Series` – Satu dimensi (seperti array)
+- `DataFrame` – Dua dimensi (seperti tabel)
+
+
+**Penggunaan Code (Pyhton)**
+import pandas as pd
+
+df = pd.read_csv('data.csv')
+df.head()
+df.describe()
+df.dropna(inplace=True)
+
+
+# 2. **Matplotlib**
+Matplotlib adalah library visualisasi data di Python yang digunakan untuk membuat grafik, seperti:
+
+- Line chart
+- Bar chart
+- Histogram
+- Scatter plot
+- Pie chart, dan banyak lagi
+
+**Fungsi Matplotlib**
+
+- Visualisasi Tren waktu
+- Melihat Distribusi Data
+- Membandingkan Kategori
+- Menunjukkan hubungan antar variabel
+
+**Penggunaan Code (Pyhton)**
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4]
+y = [10, 20, 25, 30]
+
+plt.plot(x, y)
+plt.title('Contoh Grafik')
+plt.xlabel('X-Axis')
+plt.ylabel('Y-Axis')
+plt.grid(True)
+plt.show()
+
+
+# 3. **Naive Bayes** 
+Naive Bayes adalah algoritma klasifikasi berdasarkan Teorema Bayes, yang menghitung peluang suatu data termasuk dalam suatu kelas.
+​
+### 🧠 Rumus Teorema Bayes
+
+![Teorema Bayes](images/teorema-bayes.png)
