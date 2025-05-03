@@ -11,7 +11,7 @@ Pandas adalah library Python yang digunakan untuk manipulasi dan analisis data. 
 - `DataFrame` – Dua dimensi (seperti tabel)
 
 
-**Penggunaan Code (Pyhton)**
+**Penggunaan Code(Pyhton)**
 import pandas as pd
 
 df = pd.read_csv('data.csv')
@@ -21,6 +21,8 @@ df.dropna(inplace=True)
 
 
 # 2. **Matplotlib**
+
+### 📌 Matplotlib
 Matplotlib adalah library visualisasi data di Python yang digunakan untuk membuat grafik, seperti:
 
 - Line chart
@@ -36,7 +38,7 @@ Matplotlib adalah library visualisasi data di Python yang digunakan untuk membua
 - Membandingkan Kategori
 - Menunjukkan hubungan antar variabel
 
-**Penggunaan Code (Pyhton)**
+**Penggunaan Code(Pyhton)**
 import matplotlib.pyplot as plt
 
 x = [1, 2, 3, 4]
@@ -57,3 +59,74 @@ Naive Bayes adalah algoritma klasifikasi berdasarkan Teorema Bayes, yang menghit
 
 ![Teorema Bayes](images/teorema-bayes.png)
 
+**Kelebihan Naive Bayes**
+- Cepat dan ringan
+- Bekerja baik untuk data teks (spam, sentimen, klasifikasi berita)
+- Tidak banyak parameter
+
+**Kekurangan**
+- Asumsi independensi jarang terpenuhi
+- Tidak cocok untuk fitur saling bergantung
+
+**Penggunaan Code(Pyhton)**
+from sklearn.naive_bayes import GaussianNB
+
+model = GaussianNB()
+model.fit(X_train, y_train)
+prediksi = model.predict(X_test)
+
+# 4. **Decision Tree**
+Decision Tree adalah model pembelajaran yang menggunakan struktur pohon untuk membuat keputusan atau prediksi.
+Setiap node adalah sebuah pertanyaan/kondisi, dan daun (leaf) adalah hasilnya.
+
+**Proses**
+1. Data dipecah berdasarkan fitur yang memberikan informasi paling baik (menggunakan Gini, Entropy, atau informasi gain)
+2. Proses pemecahan terus berlanjut hingga:
+- Semua data dalam satu grup homogen
+- Atau mencapai kedalaman tertentu
+
+**Jenis Decision Tree**
+- Classification Tree – Untuk masalah klasifikasi
+- Regression Tree – Untuk prediksi nilai kontinu
+
+**Kelebihan**
+- Mudah dipahami (mirip flowchart)
+- Tidak perlu scaling data
+- Bisa menangani data kategorikal & numerik
+
+**Kekurangan**
+- Rentan terhadap overfitting
+- Tidak stabil (sedikit perubahan data bisa mengubah pohon)
+
+**Penggunaan Code(Python)**
+from sklearn.tree import DecisionTreeClassifier
+
+clf = DecisionTreeClassifier()
+clf.fit(X_train, y_train)
+y_pred = clf.predict(X_test)
+
+**Visualisasi Pohon**
+from sklearn.tree import plot_tree
+
+plot_tree(clf, filled=True)
+plt.show()
+
+
+---
+
+## 📌 Kesimpulan
+
+Selama proses belajar dan persiapan UTS, beberapa materi inti yang sudah dipelajari meliputi:
+
+- 🐼 **Pandas** — library penting di Python untuk mengelola dan memanipulasi data. Cocok untuk membaca data (seperti file .csv), membersihkan nilai kosong, filter data, dan eksplorasi awal sebelum dianalisis lebih lanjut.
+- 📊 **Matplotlib** — digunakan untuk membuat grafik dan visualisasi data, agar pola dan tren lebih mudah dipahami secara visual.
+- 🧠 **Naive Bayes** — algoritma klasifikasi yang berbasis pada probabilitas, sangat efektif untuk teks seperti analisis sentimen atau deteksi spam.
+- 🌳 **Decision Tree** — model yang memisahkan data berdasarkan kondisi tertentu dalam bentuk pohon. Mudah dipahami dan cocok untuk klasifikasi maupun regresi.
+
+Semua materi ini memberikan dasar yang kuat untuk memahami proses analisis data, dari mulai input data mentah sampai membuat model prediksi. Ke depannya, pemahaman ini bisa dikembangkan lagi untuk diterapkan dalam project nyata maupun tugas akhir.
+
+---
+
+📌 **Disusun oleh:** Aditya  
+🎓 **FTI UNPAM**
+📂 **Proyek ini bagian dari persiapan UTS Data Mining**
